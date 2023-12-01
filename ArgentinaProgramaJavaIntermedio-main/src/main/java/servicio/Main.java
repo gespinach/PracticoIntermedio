@@ -171,6 +171,6 @@ public class Main {
 	
 	}
 	
-	
+	incidente1.buscarTecnicosDisponibles(incidente1.servicio);
 
 }

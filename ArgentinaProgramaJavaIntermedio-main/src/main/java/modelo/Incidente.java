@@ -79,15 +79,19 @@ public class Incidente implements Serializable {
 		this.tecnicoAsignado = tecnico;
 	}
 	
-	public List tecnicosDisponibles(Servicio especialidad) {
+	public void buscarTecnicosDisponibles(Servicio especialidad) {
 		
 		TecnicoDAO tecnicoDAO = new TecnicoDAO();
 		
-		ArrayList<Tecnico> tecnicosDisponibles = (ArrayList) tecnicoDAO.findAll();
 		
+		List<Tecnico> listaTecnicosDisponibles = tecnicoDAO.findAll();
+		for (Tecnico tecnico : listaTecnicosDisponibles) {
+			System.out.println(tecnico.getNombre);
+		//listaTecnicosDisponibles.stream().anyMatch((tecnico)-> tecnico.especialidades.stream().anyMatch ((especialidadTecnico)-> especialidadTecnico.equals(especialidad)))
+		//listaTecnicosDisponibles
 		
-		
-		
+		//listaTecnicoDisponible.stream().forEach((tecnico) -> System.out.println(tecnico.DNI));
+		//return listaTecnicoDisponible;
 	}	
 		
 		
